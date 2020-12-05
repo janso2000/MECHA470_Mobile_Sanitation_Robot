@@ -3,15 +3,14 @@
 
 -------------------------------------------------------------------------------------
 
-Control System Design of Low Impact Treadmill
+Mobile Sanitation Robot
 
 <p align = "center">
 Project Members:
-Jonathan Bostrom -
-Yuanyuan Ju -
-Nick Lauer -
+TaylorAnne Brown - 
 Maryam Nassar -
-Caleb Townley
+Juan Ruiz -
+Daniel Sousa 
       </p> 
 
 -------------------------------------------------------------------------------------
@@ -26,8 +25,8 @@ Caleb Townley
 <center>
    <h4> California State University Chico</h4>
    <h4> College of Engineering, Computer Science, and Construction Management</h4> 
-   <h4> MECA 482 Control System Design</h4> 
-   <h4> Control System Design of Low Impact Treadmill</h4> 
+   <h4> MECA 570 Introduction to Robotics</h4> 
+   <h4> Mobile Sanitation Robot</h4> 
 </center>
 
 #### Table of Contents
