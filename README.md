@@ -25,7 +25,7 @@ Daniel Sousa
 <center>
    <h4> California State University Chico</h4>
    <h4> College of Engineering, Computer Science, and Construction Management</h4> 
-   <h4> MECA 570 Introduction to Robotics</h4> 
+   <h4> MECA 470 Introduction to Robotics</h4> 
    <h4> Mobile Sanitation Robot</h4> 
 </center>
 
