@@ -31,25 +31,19 @@ Daniel Sousa
 
 #### Table of Contents
 - [1. Introduction](#1-Introduction)
-- [2. Control Theory Modeling](#2-Control-Theory-Modeling)
-- [3. Dynamic Modeling](#3-Dynamic-Modeling) 
-- [4. Design and Simulation](#4-Design-and-Simulation)
+- [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
+- [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
+- [4. Simulation](#4-Simulation)
 - [5. Appendix](#5-Appendix)
 - [6. References](#6-References)
 
 ## 1. Introduction 
-The actively damped treadmill system consists of a treadmill and suspension system which reduces the peak reaction force felt by an object impacting the treadmill. The control is achieved by tuning the damping and spring coefficients in the suspension system, taking into account the spring and damping coefficients of the frame itself. The Project Team’s goal is to develop a comprehensive solution (explained in more details in the deliverables section) to reduce the impact for any weight within the limits.
+What is this project about and what are we doing 
 
-## 2. Control Theory Modeling
-Sample High-Level Architecture:
+## 2. Mobile Robot Degrees of Freedom
+Insert photo of calcs for the mobile robot - 3 DOF 
 
-The project is most completely represented as a series of mass-spring-damper systems stacked upon each other, as illustrated here:
-<p align = "center">
-  <img src = "photos/Treadmill%20System%20ModelResize.png" height = "260px" style="margin:10px 10px">
-</p>
-This diagram illustrates the spring and damping properties of the runner's body (K_f, D_f) as they interact with the spring and damping properties of the treadmil plate (K_p, D_p). The plate in turn acts upon the frame, which has its own spring constant (K_frame), and the whole system is supported by the active damping system (K_s, D_s).
-
-## 3. Dynamic Modeling 
+## 3. Mapping and Path Planning with ROS 
 
 In order to better approach the problem, it is necessary to simplify the complete model into a single mass-spring-damper system.
 <p align = "center">
