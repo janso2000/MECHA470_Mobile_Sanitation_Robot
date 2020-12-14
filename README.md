@@ -45,12 +45,12 @@ Insert photo of calcs for the mobile robot - 3 DOF
 
 ## 3. Mapping and Path Planning with ROS 
 
-In order to better approach the problem, it is necessary to simplify the complete model into a single mass-spring-damper system.
+Someone needs to describe the use of ROS in the scope of this project 
+
 <p align = "center">
   <img src = "photos/MKD_fbd.PNG" "width="504" height="351" style="margin:10px 10px">
 </p>
 
-Here, the dynamic properties of the runner are reduced to a single input (F_t), and the dynamic properties of the plate, the frame, and the active damping system are merged into a single mass-spring-damper representation. The resulting equation of motion is given below.                                                                        
  <p align = "center">
   <img src = "photos/MKD_eqn_ft.PNG" width="301" height="71" style="margin:10px 10px">
 </p>    
@@ -60,7 +60,7 @@ Here, the dynamic properties of the runner are reduced to a single input (F_t), 
 // <img src = "photos/MKD_eqn_u.PNG" width="281" height="72" style="margin:10px 10px">
 </p>
 -->
-By applying LaPlace transformations, we can obtain a system transfer function in s-domain.
+
 <p align = "center">
   <img src = "photos/MKD_eqn_Gs.PNG" height = "width="679" height="165" style="margin:10px 10px">
 </p>
@@ -81,11 +81,10 @@ This transfer function allows us to model the system in Simulink, and enables us
   <p align = "center">
   <img src = "photos/Masons%20Rule2.png" height = "100px" style="margin:7px 7px">
 </p>
-  The open loop transfer function of the entire treadmill system, including all of the damping coefficients of each component were modeled into one system above, which is seemingly unsolvable at this point. This equation is not currently being used in this project, but it is included to provide context as to how complicated this problem can become if left unsimplified.
-  
+
+
   --------------------------------------------------------------------------------------------------------------
   
- Here is a summary of the simulation results with the requirements as shown:
   <p align = "center">
   <img src = "photos/Output%20Values.png" height = "260px" style="margin:10px 10px">
 </p>
