@@ -68,22 +68,9 @@ This transfer function allows us to model the system in Simulink, and enables us
 <p align = "center">
   <img src = "photos/MKD_Smlnk_Mdl.PNG" "width="721" height="381" style="margin:10px 10px">
 </p>
-
-
-## 4. Design and Simulation
-
-System simulation was done using Coppelia-Sim. Treadmill spring dampeners were siumulated using prismaic joints with an accompanying 
-Lua script in order to simulate a realistic spring with a spring constant value of 566,440 N/M reacting to a downward force of 25 kg
-The resulting Coppelia sumulation is shown below
-
-<p align = "center">
-<iframe src="https://drive.google.com/file/d/1JGDH5E4Qt0_5jSQPU98jLqbb_XijHtdo/preview" width="640" height="480"></iframe>
-</p>
-
-function sysCall_init()
+    <code> function sysCall_init()
     left_wheel=sim.getObjectHandle('Magni_LeftMotor')
     right_wheel=sim.getObjectHandle('Magni_RightMotor')
-  
     xml = [[
     <ui title="Speed Control" closeable="true" resizable="false" activate="false">
     <group layout="form" flat="true">
@@ -93,23 +80,24 @@ function sysCall_init()
         <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateRight" id="4"/>
     </group>
     <label text="" style="* {margin-left: 400px;}"/>
-</ui>
-]]
+      </ui>
+      ]]
         ui=simUI.create(xml)
-end
+      end
 
-function actuateLeft(ui,id,newVal)
-    local val = 0.5*newVal
+      function actuateLeft(ui,id,newVal)
+      local val = 0.5*newVal
     sim.setJointTargetVelocity(left_wheel,val)
     simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
-end
+      end
 
-function actuateRight(ui,id,newVal)
+      function actuateRight(ui,id,newVal)
     local val = 0.5*newVal
     sim.setJointTargetVelocity(right_wheel,val)
     simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
-end
-      
+      end
+      </code>
+
 In addition we also simulated a mass-spring system using a Visual Python extension. This allowed for a more accurate representation of the model's spring system. The same values were used to represent with spring with the constant at 566,440 N/M and a downward forcer of 25 kg. In addition to this we were able to model the spring radius, number of coils, and thickness. These values are 1.25, 10, and .625 respectively. Below is the Visual Python simulation of the spring system. 
 
 <p align = "center">
