@@ -46,14 +46,15 @@ The Magni mobile robot operates using a non-holonomic (meaning that its state de
 
 When calculating the degrees of freedom for the mobile robot it was useful to reference Chapter 2 of our Modern Robotics textbook [1] Chapter 2 Section 1 explains the procedure for finding the dof of a rigid body in 3 dimensional space based on its configuration. Specifically finding the dof of our mobile robot can be compared to the mathematical proof of finding the dof of a coin laying on a flat surface. For example the configuration of the coin can be described using two coordinates (x,y), additionally theta can be used to describe the orientation of the coin. Shown below is the mathematical proof for the 3 dof on the coin. 
 
+<p align = "center">
+  <img src = "Images/3DOF.PNG" "width="590" height="440" style="margin:10px 10px">
+</p>
 
 ## 3. Mapping and Path Planning with ROS 
 
 Someone needs to describe the use of ROS in the scope of this project 
 
-<p align = "center">
-  <img src = "photos/MKD_fbd.PNG" "width="504" height="351" style="margin:10px 10px">
-</p>
+
 
  <p align = "center">
   <img src = "photos/MKD_eqn_ft.PNG" width="301" height="71" style="margin:10px 10px">
