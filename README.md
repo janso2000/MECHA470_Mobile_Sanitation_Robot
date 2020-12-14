@@ -41,7 +41,9 @@ Daniel Sousa
 What is this project about and what are we doing 
 
 ## 2. Mobile Robot Degrees of Freedom
-Insert photo of calcs for the mobile robot - 3 DOF 
+
+The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot is has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
+
 
 ## 3. Mapping and Path Planning with ROS 
 
@@ -91,6 +93,8 @@ This transfer function allows us to model the system in Simulink, and enables us
 
 
 ## 4. Coppelia Simulation 
+
+The Magni mobile robot was modeled using CoppeliaSim. An illustration of the simulation in addition to the Lua code are both provided below. 
 
        function sysCall_init()
             left_wheel=sim.getObjectHandle('Magni_LeftMotor')
