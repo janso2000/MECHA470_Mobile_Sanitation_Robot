@@ -33,7 +33,7 @@ Daniel Sousa
 - [1. Introduction](#1-Introduction)
 - [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
-- [4. Coppelia Simulation](#4-Coppelia Simulation)
+- [4. Coppelia Simulation](#4-Coppelia-Simulation)
 - [5. Appendix](#5-Appendix)
 - [6. References](#6-References)
 
@@ -130,6 +130,9 @@ The Magni mobile robot was modeled using CoppeliaSim. An illustration of the sim
 
 Degree of Freedom Calculation: 
 https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
+
+Magni Mobile Robot Information: 
+https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiquity-robotics/
 
 
 ## 6. References
