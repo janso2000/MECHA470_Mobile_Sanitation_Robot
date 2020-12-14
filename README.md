@@ -31,7 +31,7 @@ Daniel Sousa
 
 #### Table of Contents
 - [1. Introduction](#1-Introduction)
-- [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
+- [2. Mobile Robot Degrees of Freedom (dof)](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
 - [4. Coppelia Simulation](#4-Coppelia-Simulation)
 - [5. Appendix](#5-Appendix)
@@ -40,9 +40,11 @@ Daniel Sousa
 ## 1. Introduction 
 What is this project about and what are we doing 
 
-## 2. Mobile Robot Degrees of Freedom
+## 2. Mobile Robot Degrees of Freedom (dof)
 
 The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot it has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
+
+When calculating the degrees of freedom for the mobile robot it was useful to reference Chapter 2 of our Modern Robotics textbook [1] Chapter 2 Section 1 explains the procedure for finding the dof of a rigid body in 3 dimensional space based on its configuration. Specifically finding the dof of our mobile robot can be compared to the mathematical proof of finding the dof of a coin laying on a flat surface. For example the configuration of the coin can be described using two coordinates (x,y), additionally theta can be used to describe the orientation of the coin. Shown below is the mathematical proof for the 3 dof on the coin. 
 
 
 ## 3. Mapping and Path Planning with ROS 
@@ -128,16 +130,16 @@ The Magni mobile robot was modeled using CoppeliaSim. An illustration of the sim
 
 ## 5. Appendix
 
-Degree of Freedom Calculation: 
+A1: Degree of Freedom Calculation: 
 https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
 
-Magni Mobile Robot Information: 
+A2: Magni Mobile Robot Information: 
 https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiquity-robotics/
 
 
 ## 6. References
 
-Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
+[1] Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
 
 
 <a href="https://github.com/janso2000/MECHA470_Mobile_Sanitation_Robot"> Click here to go to our project repository </a>
