@@ -33,7 +33,7 @@ Daniel Sousa
 - [1. Introduction](#1-Introduction)
 - [2. Mobile Robot Degrees of Freedom](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
-- [4. Simulation](#4-Simulation)
+- [4. Coppelia Simulation](#4-Coppelia Simulation)
 - [5. Appendix](#5-Appendix)
 - [6. References](#6-References)
 
@@ -69,36 +69,7 @@ This transfer function allows us to model the system in Simulink, and enables us
   <img src = "photos/MKD_Smlnk_Mdl.PNG" "width="721" height="381" style="margin:10px 10px">
 </p>
   
-    function sysCall_init()
-            left_wheel=sim.getObjectHandle('Magni_LeftMotor')
-            right_wheel=sim.getObjectHandle('Magni_RightMotor')
-    xml = [[
-    <ui title="Speed Control" closeable="true" resizable="false" activate="false">
-    <group layout="form" flat="true">
-        <label text="Left Wheel (rad/s): 0.00" id="1"/>
-        <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateLeft" id="2"/>
-        <label text="Right Wheel (rad/s): 0.00" id="3"/>
-        <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateRight" id="4"/>
-    </group>
-    <label text="" style="* {margin-left: 400px;}"/>
-      </ui>
-      ]]
-        ui=simUI.create(xml)
-    end
-    
-    function actuateLeft(ui,id,newVal)
-            local val = 0.5*newVal
-            sim.setJointTargetVelocity(left_wheel,val)
-            simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
-      end
 
-     function actuateRight(ui,id,newVal)
-            local val = 0.5*newVal
-            sim.setJointTargetVelocity(right_wheel,val)
-            simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
-      end
-
-In addition we also simulated a mass-spring system using a Visual Python extension. This allowed for a more accurate representation of the model's spring system. The same values were used to represent with spring with the constant at 566,440 N/M and a downward forcer of 25 kg. In addition to this we were able to model the spring radius, number of coils, and thickness. These values are 1.25, 10, and .625 respectively. Below is the Visual Python simulation of the spring system. 
 
 <p align = "center">
 <iframe src="https://drive.google.com/file/d/1dyAuiPnWZ_z191VjUVspRuHX62vPLFmA/view?usp=sharing" width="640" height="480"></iframe>
@@ -120,7 +91,37 @@ In addition we also simulated a mass-spring system using a Visual Python extensi
 </p>
 
 
-              
+## 4. Coppelia Simulation 
+
+       function sysCall_init()
+            left_wheel=sim.getObjectHandle('Magni_LeftMotor')
+            right_wheel=sim.getObjectHandle('Magni_RightMotor')
+             xml = [[
+                         <ui title="Speed Control" closeable="true" resizable="false" activate="false">
+                         <group layout="form" flat="true">
+                         <label text="Left Wheel (rad/s): 0.00" id="1"/>
+                         <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateLeft" id="2"/>
+                  <label text="Right Wheel (rad/s): 0.00" id="3"/>
+        <hslider tick-position="above" tick-interval="1" minimum="-10" maximum="10" on-change="actuateRight" id="4"/>
+    </group>
+    <label text="" style="* {margin-left: 400px;}"/>
+      </ui>
+      ]]
+        ui=simUI.create(xml)
+    end
+    
+    function actuateLeft(ui,id,newVal)
+            local val = 0.5*newVal
+            sim.setJointTargetVelocity(left_wheel,val)
+            simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
+      end
+
+     function actuateRight(ui,id,newVal)
+            local val = 0.5*newVal
+            sim.setJointTargetVelocity(right_wheel,val)
+            simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
+      end
+
 
 ## 5. Appendix
 
@@ -128,14 +129,9 @@ Degree of Freedom Calculation:
 https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
 
 
-
-
 ## 6. References
 
 Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
 
-Surface effects on ground reaction forces and lower extremity kinematics in running
-DIXON, SHARON J.; COLLOP, ANDREW C.; BATT, MARK E.
-https://journals.lww.com/acsm-msse/Fulltext/2000/11000/Surface_effects_on_ground_reaction_forces_and.16.aspx
 
 <a href="https://github.com/janso2000/MECHA470_Mobile_Sanitation_Robot"> Click here to go to our project repository </a>
