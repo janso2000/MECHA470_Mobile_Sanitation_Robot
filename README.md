@@ -104,27 +104,7 @@ In addition we also simulated a mass-spring system using a Visual Python extensi
 <iframe src="https://drive.google.com/file/d/1dyAuiPnWZ_z191VjUVspRuHX62vPLFmA/view?usp=sharing" width="640" height="480"></iframe>
 </p>
 
-        *** from vpython import *
-            #GlowScript 2.9 VPython
-             display(width=700,height=700,center=vector(7,0,0),background=color.white)
-             wall=box(pos=vector(0,1,0),size=vector(0.2,12,12),color=color.white)
-             floor=box(pos=vector(6,-1.75,-1),size=vector(18,0.2,10),color=color.white)
-             Mass=box(pos=vector(12,0,0),velocity=vector(0,0,0),size=vector(1,1,1),mass=10.0,color=color.green)
-              pivot=vector(0,0,0)
-              spring=helix(pos=pivot,axis=Mass.pos-pivot,radius=1.25,constant=566440,thickness=0.625,coils=10,color=color.orange)
-              eq=vector(9,0,0)
-              #spring constant is in units of N/M
-              #spring and block size values are in units of mm
-              t=0
-              dt=0.001
-              while (t<50):
-              rate(100)
-              acc=(eq-Mass.pos)*(spring.constant/Mass.mass)
-              Mass.velocity=Mass.velocity+acc*dt
-              Mass.pos=Mass.pos+Mass.velocity*dt
-              spring.axis=Mass.pos-spring.pos
-              t=t+dt
-              
+     
 
 
   <p align = "center">
@@ -144,21 +124,18 @@ In addition we also simulated a mass-spring system using a Visual Python extensi
 
 ## 5. Appendix
 
-Basis for shoe damping estimates:
-https://www.google.com/url?q=https://www.researchgate.net/publication/316526467_The_Effects_of_shoe_stiffness_and_damping_on_the_Gastrocnemius_vibration_during_walking&sa=D&ust=1589745572663000&usg=AFQjCNEl91jeMZW9CHBB52Nol5StPYOswQ
+Degree of Freedom Calculation: 
+https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
 
-Basis for frame damping estimate:
-https://www.google.com/url?q=https://iopscience.iop.org/article/10.1088/1742-6596/268/1/012022/pdf&sa=D&ust=1589745572662000&usg=AFQjCNGAvX2rAkUiJHnXtbrUmGIrKLEIRA
+
+
 
 ## 6. References
 
-Kenneth P. Clark, Laurence J. Ryan, Peter G. Weyand
-Journal of Experimental Biology 2017 220: 247-258; doi: 10.1242/jeb.138057
-https://jeb.biologists.org/content/220/2/247
+Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
 
 Surface effects on ground reaction forces and lower extremity kinematics in running
 DIXON, SHARON J.; COLLOP, ANDREW C.; BATT, MARK E.
 https://journals.lww.com/acsm-msse/Fulltext/2000/11000/Surface_effects_on_ground_reaction_forces_and.16.aspx
 
-
-<a href="https://github.com/MECA-482-Project/Main"> Click here to go to our project repository </a>
+<a href="https://github.com/janso2000/MECHA470_Mobile_Sanitation_Robot"> Click here to go to our project repository </a>
