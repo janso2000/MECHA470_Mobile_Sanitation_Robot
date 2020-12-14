@@ -42,7 +42,7 @@ What is this project about and what are we doing
 
 ## 2. Mobile Robot Degrees of Freedom
 
-The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot is has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
+The Magni mobile robot operates using a non-holonomic (meaning that its state depends on the path taken in order to achieve) differential drive system in the two front tires. As a differential drive mobile robot it has 3 degrees of freedom: X and Y directions (translational) and around the Z axis (rotational). 
 
 
 ## 3. Mapping and Path Planning with ROS 
