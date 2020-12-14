@@ -68,9 +68,10 @@ This transfer function allows us to model the system in Simulink, and enables us
 <p align = "center">
   <img src = "photos/MKD_Smlnk_Mdl.PNG" "width="721" height="381" style="margin:10px 10px">
 </p>
-    <code> function sysCall_init()
-    left_wheel=sim.getObjectHandle('Magni_LeftMotor')
-    right_wheel=sim.getObjectHandle('Magni_RightMotor')
+  
+    function sysCall_init()
+            left_wheel=sim.getObjectHandle('Magni_LeftMotor')
+            right_wheel=sim.getObjectHandle('Magni_RightMotor')
     xml = [[
     <ui title="Speed Control" closeable="true" resizable="false" activate="false">
     <group layout="form" flat="true">
@@ -83,20 +84,19 @@ This transfer function allows us to model the system in Simulink, and enables us
       </ui>
       ]]
         ui=simUI.create(xml)
+    end
+    
+    function actuateLeft(ui,id,newVal)
+            local val = 0.5*newVal
+            sim.setJointTargetVelocity(left_wheel,val)
+            simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
       end
 
-      function actuateLeft(ui,id,newVal)
-      local val = 0.5*newVal
-    sim.setJointTargetVelocity(left_wheel,val)
-    simUI.setLabelText(ui,1,string.format("Left Wheel (rad/s): %.2f",val))
+     function actuateRight(ui,id,newVal)
+            local val = 0.5*newVal
+            sim.setJointTargetVelocity(right_wheel,val)
+            simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
       end
-
-      function actuateRight(ui,id,newVal)
-    local val = 0.5*newVal
-    sim.setJointTargetVelocity(right_wheel,val)
-    simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
-      end
-      </code>
 
 In addition we also simulated a mass-spring system using a Visual Python extension. This allowed for a more accurate representation of the model's spring system. The same values were used to represent with spring with the constant at 566,440 N/M and a downward forcer of 25 kg. In addition to this we were able to model the spring radius, number of coils, and thickness. These values are 1.25, 10, and .625 respectively. Below is the Visual Python simulation of the spring system. 
 
