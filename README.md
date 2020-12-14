@@ -17,7 +17,7 @@ Daniel Sousa
 
 
 <p align = "center">
-  <img src = "photos/HeaderPhoto.PNG" height = "320px" style="margin:10px 10px">
+  <img src = "MagniinCoppelia.PNG" height = "320px" style="margin:10px 10px">
 </p>
 
 
