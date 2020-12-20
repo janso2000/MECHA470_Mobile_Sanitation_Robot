@@ -137,6 +137,8 @@ It has been known that UV light is a mutagen at the cellular level for over 100 
 
 For this project a 254nm low ozone STER-L-RAY ® Amalgam Germicidal Ultraviolet (UV-C) Lamps will be used due to their reasonably priced bulbs at $66 each https://www.buyultraviolet.com/ultraviolet-lamps-uv-bulbs-gph436t5l-05-1097-r
 
+ <img src = "Images/UVC-chart.jpg" height = "320px" style="margin:10px 10px">
+ 
 The 254 nm light damages the viral deoxyribonucleic acid (DNA) or ribonucleic acid (RNA) so that the virus cannot reproduce. According to the International Ultraviolet association and the CDC, due to the COVID-19 virus being relatively new there is not yet a specific deactivation dosage. The dosage for similar viruses in the same family need a dose of 10-20mJ/cm^2 to achieve 99.9% disinfection in lab settings. In real life applications the virus is often hidden or shaded from direct UVC light which in turn reduces the UVCs effectiveness. Therefore, to ensure 99.9% deactivation researchers recommend a dosage of 1,000-3,000 mJ/cm2.
 
 To determine the intensity a 254nm UVC lamp produces a UVC detector is required. Once the intensity of the UVC lamp is known we can use the following equation to determine the minimum time needed to sanitize the area of COVID-19. 
