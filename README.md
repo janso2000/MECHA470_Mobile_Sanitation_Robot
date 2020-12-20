@@ -17,7 +17,7 @@ Daniel Sousa
 
 
 <p align = "center">
-  <img src = "Images/UVRay.jpg" height = "320px" style="margin:10px 10px">
+  <img src = "Images/UVRay.PNG" height = "320px" style="margin:10px 10px">
 </p>
 
 
