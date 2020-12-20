@@ -39,7 +39,7 @@ Daniel Sousa
 - [7. References](#7-References)
 
 ## 1. Introduction 
-What is this project about and what are we doing 
+The objective of this project is to develop the necessary skills for an autonomous mobile robot that uses UV light to sanitize its surroundings. The scope of this projcet included building a functional simulation using CoppeliaSim and ROS, reseraching the most effective potential UV light bulbs for our application, and a kinematic analysis to determine the degrees of freedom for the mobile robot. 
 
 ## 2. Mobile Robot Degrees of Freedom (dof)
 
