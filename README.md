@@ -34,8 +34,9 @@ Daniel Sousa
 - [2. Mobile Robot Degrees of Freedom (dof)](#2-Mobile-Robot-Degrees-of-Freedom)
 - [3. Mapping and Path Planning with ROS](#3-Mapping-and-Path-Planning-with-ROS) 
 - [4. Coppelia Simulation](#4-Coppelia-Simulation)
-- [5. Appendix](#5-Appendix)
-- [6. References](#6-References)
+- [5. UV Sanitization](#5-UV-Sanitization) 
+- [6. Appendix](#6-Appendix)
+- [7. References](#7-References)
 
 ## 1. Introduction 
 What is this project about and what are we doing 
@@ -130,8 +131,10 @@ The Magni mobile robot was modeled using CoppeliaSim. An illustration of the sim
             simUI.setLabelText(ui,3,string.format("Right Wheel (rad/s): %.2f",val))
       end
 
+## 5. UV Sanitization 
 
-## 5. Appendix
+
+## 6. Appendix
 
 A1: Degree of Freedom Calculation: 
 https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freedom-of-a-robot/
@@ -140,7 +143,7 @@ A2: Magni Mobile Robot Information:
 https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiquity-robotics/
 
 
-## 6. References
+## 7. References
 
 [1] Lynch, K., &amp; Park, F. C. (2019). Modern robotics: Mechanics, planning, and control. Cambridge, United Kingdom: Cambridge University Press.
 
