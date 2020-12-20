@@ -1,4 +1,4 @@
-# MECHA470_Mobile_Sanitation_Robot
+# MECHA470- Mobile Sanitation Robot
 ### MECHA 470 Robotics Project
 
 -------------------------------------------------------------------------------------
