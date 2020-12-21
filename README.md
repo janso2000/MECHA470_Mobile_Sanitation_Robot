@@ -146,19 +146,19 @@ The light intensity’s behavior can be modeled using RoboDK’s Paint gun tool.
  <img src = "Images/imag1sec3.jpg" height = "320px" style="margin:10px 10px">
  </p> 
 Although the tutorial does not resemble the Magni robot, the SprayOn Python code provides a good starting point. Editing the aforementioned Python script in the program allows the user to change the spray colors depending on the intensity. Also, the spray pattern’s shape can be changed in this script. The section of code which accomplishes the latter can be seen below.
-```ruby
-# define the ellypse volume as p0, pA, pB, colorRGBA (close and far) , in mm
-# coordinates must be provided with respect to the TCP
-close_p0 =[ -90, -117, 0] # xyz in mm
-close_pA =[ 90, -117, 0] # xyz in mm
-close_pB=[ -90, 117, 0] # xyz in mm
-close_color = [1, 0, 0, 1] #RGBA (0-1)
+  
+      # define the ellypse volume as p0, pA, pB, colorRGBA (close and far) , in mm
+      # coordinates must be provided with respect to the TCP
+      close_p0 =[ -90, -117, 0] # xyz in mm
+      close_pA =[ 90, -117, 0] # xyz in mm
+      close_pB=[ -90, 117, 0] # xyz in mm
+      close_color = [1, 0, 0, 1] #RGBA (0-1)
 
-far_p0 = [ -175, -190, 200] #xyz in mm
-far_pA = [ 175, -190, 200] #xyz in mm
-far_pB = [ -175, 190, 200] #xyz in mm
-far_color = [0, 0, 1, 0.2] #RGBA (0-1)
-```
+      far_p0 = [ -175, -190, 200] #xyz in mm
+      far_pA = [ 175, -190, 200] #xyz in mm
+      far_pB = [ -175, 190, 200] #xyz in mm
+      far_color = [0, 0, 1, 0.2] #RGBA (0-1)
+      
 <p align = "center">
  <img src = "Images/imag2sec3.jpg" height = "320px" style="margin:10px 10px">
  </p> 
