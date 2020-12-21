@@ -58,7 +58,7 @@ As previously states this proof also applies to the dof for the differential dri
 Like the Sharq IQ robot, the magni robot will follow a similar navigation and path planning. The robot uses the exising ROS navigation stack to help guide and drive the robot. Depending on the area/place the robot will sanitize, an existing map of the area is needed so the map_server package is able to map the area. The move_base package allows for the magni robot to navigate the area while the sensors are continuously relaying information so the robot never collides with anything. 
 <div id=”mainDiv”>
 <iframe src="https://giphy.com/embed/6BCk9Y2puF5c0xCyuE" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<\div>
+</div>
 
 ## 4. Coppelia Simulation 
 
