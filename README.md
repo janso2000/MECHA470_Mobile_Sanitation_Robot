@@ -80,7 +80,7 @@ This transfer function allows us to model the system in Simulink, and enables us
 
 
 <p align = "center">
-<iframe src="https://drive.google.com/file/d/1dyAuiPnWZ_z191VjUVspRuHX62vPLFmA/view?usp=sharing" width="640" height="480"></iframe>
+<iframe src="MagninnCoppelia.jpg" width="640" height="480"></iframe>
 </p>
 
      
