@@ -91,13 +91,6 @@ This transfer function allows us to model the system in Simulink, and enables us
 </p>
 
 
-  --------------------------------------------------------------------------------------------------------------
-  
-  <p align = "center">
-  <img src = "photos/Output%20Values.png" height = "260px" style="margin:10px 10px">
-</p>
-
-
 ## 4. Coppelia Simulation 
 
 The Magni mobile robot was modeled using CoppeliaSim. An illustration of the simulation in addition to the Lua code are both provided below. The CoppeliaSim file for the Magni robot is provided in the project repository. 
