@@ -59,6 +59,9 @@ Like the Sharq IQ robot, the magni robot will follow a similar navigation and pa
 <p align = "center">
       <iframe src="https://giphy.com/embed/6BCk9Y2puF5c0xCyuE" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
       </p>
+      
+      <div style="width:100%;height:0;padding-bottom:53%;position:relative;"><iframe src="https://giphy.com/embed/6BCk9Y2puF5c0xCyuE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/6BCk9Y2puF5c0xCyuE">via GIPHY</a></p>
+      
 <p><a href="https://giphy.com/gifs/6BCk9Y2puF5c0xCyuE">via GIPHY</a></p>
 
  <p align = "center">
