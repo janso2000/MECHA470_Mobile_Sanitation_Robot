@@ -55,9 +55,10 @@ As previously states this proof also applies to the dof for the differential dri
 
 ## 3. Mapping and Path Planning with ROS 
 
-Someone needs to describe the use of ROS in the scope of this project 
+Like the Sharq IQ robot, the magni robot will follow a similar navigation and path planning. The robot uses the exising ROS navigation stack to help guide and drive the robot. Depending on the area/place the robot will sanitize, an existing map of the area is needed so the map_server package is able to map the area. The move_base package allows for the magni robot to navigate the area while the sensors are continuously relaying information so the robot never collides with anything. 
 
-
+Like the Sharq IQ robot, the magni robot will follow a similar navigation and planning
+<iframe src="https://giphy.com/embed/6BCk9Y2puF5c0xCyuE" width="480" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6BCk9Y2puF5c0xCyuE">via GIPHY</a></p>
 
  <p align = "center">
   <img src = "photos/MKD_eqn_ft.PNG" width="301" height="71" style="margin:10px 10px">
@@ -146,19 +147,9 @@ The light intensity’s behavior can be modeled using RoboDK’s Paint gun tool.
  <img src = "Images/imag1sec3.jpg" height = "320px" style="margin:10px 10px">
  </p> 
 Although the tutorial does not resemble the Magni robot, the SprayOn Python code provides a good starting point. Editing the aforementioned Python script in the program allows the user to change the spray colors depending on the intensity. Also, the spray pattern’s shape can be changed in this script. The section of code which accomplishes the latter can be seen below.
-  
-      # define the ellypse volume as p0, pA, pB, colorRGBA (close and far) , in mm
-      # coordinates must be provided with respect to the TCP
-      close_p0 =[ -90, -117, 0] # xyz in mm
-      close_pA =[ 90, -117, 0] # xyz in mm
-      close_pB=[ -90, 117, 0] # xyz in mm
-      close_color = [1, 0, 0, 1] #RGBA (0-1)
-
-      far_p0 = [ -175, -190, 200] #xyz in mm
-      far_pA = [ 175, -190, 200] #xyz in mm
-      far_pB = [ -175, 190, 200] #xyz in mm
-      far_color = [0, 0, 1, 0.2] #RGBA (0-1)
-      
+<p align = "center">
+ <img src = "Images/imag2sec3.jpg" height = "320px" style="margin:10px 10px">
+ </p> 
 As mentioned in the script’s comments, the colors can be adjusted based on the desired RGBA value. More importantly is the matrix which creates the spray pattern shape. The parameters for the shape include several matrices which indicate the farthest and closest points, relative to the gun’s frame. This section of code will need to be adjusted so that the spray pattern models the light intensity’s shape. Once, this is achieved, the simulation will resemble the figure below.
 <p align = "center">
  <img src = "Images/imag3sec3.jpg" height = "320px" style="margin:10px 10px">
