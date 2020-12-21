@@ -141,6 +141,21 @@ UV Dose = UV Intensity (μW/cm2) x Exposure Time (seconds)
 
 The inverse square law applies to germicidal ultraviolet as it does to light: the killing power decreases as the distance from the lamps increases. So we can tell how the intensity of the UV-C lamp disperses further away from the bulb itself and can be mapped in an exponential form. 
 
+The light intensity’s behavior can be modeled using RoboDK’s Paint gun tool. With the use of the included Painting Tutorial file, a small portion of the beam’s intensity can be modeled. This tutorial will resemble the figure below.
+<p align = "center">
+ <img src = "Images/imag1sec3.jpg" height = "320px" style="margin:10px 10px">
+ </p> 
+Although the tutorial does not resemble the Magni robot, the SprayOn Python code provides a good starting point. Editing the aforementioned Python script in the program allows the user to change the spray colors depending on the intensity. Also, the spray pattern’s shape can be changed in this script. The section of code which accomplishes the latter can be seen below.
+<p align = "center">
+ <img src = "Images/imag2sec3.jpg" height = "320px" style="margin:10px 10px">
+ </p> 
+As mentioned in the script’s comments, the colors can be adjusted based on the desired RGBA value. More importantly is the matrix which creates the spray pattern shape. The parameters for the shape include several matrices which indicate the farthest and closest points, relative to the gun’s frame. This section of code will need to be adjusted so that the spray pattern models the light intensity’s shape. Once, this is achieved, the simulation will resemble the figure below.
+<p align = "center">
+ <img src = "Images/imag3sec3.jpg" height = "320px" style="margin:10px 10px">
+ </p> 
+As you can see in the figure above, the red dots represent the areas where the intensity is the largest, and the blue dots represent the inverse. This simulation can highlight areas that will require either more time near the light, or for the robot to get closer.
+
+
 ## 6. Appendix
 
 A1: Degree of Freedom Calculation: 
