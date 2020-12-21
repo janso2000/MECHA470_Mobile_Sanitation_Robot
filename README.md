@@ -59,39 +59,6 @@ Like the Sharq IQ robot, the magni robot will follow a similar navigation and pa
 
 ![Alt Text](https://media.giphy.com/media/6BCk9Y2puF5c0xCyuE/giphy.gif)
 
-
- <p align = "center">
-  <img src = "photos/MKD_eqn_ft.PNG" width="301" height="71" style="margin:10px 10px">
-</p>    
-
-<!--
-<p align = "center">
-// <img src = "photos/MKD_eqn_u.PNG" width="281" height="72" style="margin:10px 10px">
-</p>
--->
-
-<p align = "center">
-  <img src = "photos/MKD_eqn_Gs.PNG" height = "width="679" height="165" style="margin:10px 10px">
-</p>
-This transfer function allows us to model the system in Simulink, and enables us to better visualize the system response.
-<p align = "center">
-  <img src = "photos/MKD_Smlnk_Mdl.PNG" "width="721" height="381" style="margin:10px 10px">
-</p>
-  
-
-
-<p align = "center">
-<img src="Images/MagninnCoppelia.jpg" width="640" height="480"></img>
-</p>
-
-     
-
-
-  <p align = "center">
-  <img src = "photos/Masons%20Rule2.png" height = "100px" style="margin:7px 7px">
-</p>
-
-
 ## 4. Coppelia Simulation 
 
 The Magni mobile robot was modeled using CoppeliaSim. An illustration of the simulation in addition to the Lua code are both provided below. The CoppeliaSim file for the Magni robot is provided in the project repository. 
