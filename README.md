@@ -51,11 +51,11 @@ When calculating the degrees of freedom for the mobile robot it was useful to re
   <img src = "Images/3DOF.PNG" "width="590" height="440" style="margin:10px 10px">
 </p>
                                                                                  
-As previously states this proof also applies to the dof for the differential drive mobile robot as it has two translational degrees of freedom and one rotational degree of freedom. 
+As previously stated this proof also applies to the dof for the differential drive mobile robot as it has two translational degrees of freedom and one rotational degree of freedom. 
 
 ## 3. Mapping and Path Planning with ROS 
 
-Like the Sharq IQ robot, the magni robot will follow a similar navigation and path planning. The robot uses the exising ROS navigation stack to help guide and drive the robot. Depending on the area/place the robot will sanitize, an existing map of the area is needed so the map_server package is able to map the area. The move_base package allows for the magni robot to navigate the area while the sensors are continuously relaying information so the robot never collides with anything. 
+Like the Sharq IQ robot [A3], the Magni robot will follow a similar procedure for navigation and path planning. The robot uses the exising ROS navigation stack to help guide and drive the robot. Depending on the area/place the robot will sanitize, an existing map of the area is needed so the map_server package is able to map the area. The move_base package allows for the Magni robot to navigate the area while the sensors are continuously relaying information so the robot never collides with any objects. 
 <p align = "center">
 <img id="centerdImage" src="https://media.giphy.com/media/6BCk9Y2puF5c0xCyuE/giphy.gif"></img>
 </p>
@@ -102,13 +102,13 @@ For this project a 254nm low ozone STER-L-RAY ® Amalgam Germicidal Ultraviolet 
  <img src = "Images/UVC-chart.jpg" height = "320px" style="margin:10px 10px">
  </p> 
  
-The 254 nm light damages the viral deoxyribonucleic acid (DNA) or ribonucleic acid (RNA) so that the virus cannot reproduce. According to the International Ultraviolet association and the CDC, due to the COVID-19 virus being relatively new there is not yet a specific deactivation dosage. The dosage for similar viruses in the same family need a dose of 10-20mJ/cm2 to achieve 99.9% disinfection in lab settings. In real life applications the virus is often hidden or shaded from direct UVC light which in turn reduces the UVCs effectiveness. Therefore, to ensure 99.9% deactivation researchers recommend a dosage of 1,000-3,000 mJ/cm2.
+The 254 nm light damages the viral deoxyribonucleic acid (DNA) or ribonucleic acid (RNA) so that the virus cannot reproduce. According to the International Ultraviolet Association [A4] and the CDC, due to the COVID-19 virus being relatively new there is not yet a specific deactivation dosage. The dosage for similar viruses in the same family need a dose of 10-20mJ/cm2 to achieve 99.9% disinfection in lab settings [2]. In real life applications the virus is often hidden or shaded from direct UVC light which in turn reduces the UVCs effectiveness. Therefore, to ensure 99.9% deactivation researchers recommend a dosage of 1,000-3,000 mJ/cm2.
 
 To determine the intensity a 254nm UVC lamp produces a UVC detector is required. Once the intensity of the UVC lamp is known we can use the following equation to determine the minimum time needed to sanitize the area of COVID-19. 
 
 UV Dose = UV Intensity (μW/cm2) x Exposure Time (seconds)
 
-The inverse square law applies to germicidal ultraviolet as it does to light: the killing power decreases as the distance from the lamps increases. So we can tell how the intensity of the UV-C lamp disperses further away from the bulb itself and can be mapped in an exponential form. 
+The inverse square law applies to germicidal ultraviolet as it does to light: the killing power decreases as the distance from the lamps increases. We can tell how the intensity of the UV-C lamp disperses further away from the bulb itself and can be mapped in an exponential form. 
 
 The light intensity’s behavior can be modeled using RoboDK’s Paint gun tool. With the use of the included Painting Tutorial file, a small portion of the beam’s intensity can be modeled. This tutorial will resemble the figure below.
 <p align = "center">
@@ -128,7 +128,7 @@ Although the tutorial does not resemble the Magni robot, the SprayOn Python code
       far_pB = [ -175, 190, 200] # xyz in mm
       far_color = [0, 0, 1, 0.2] # RGBA (0-1)
 
-As mentioned in the script’s comments, the colors can be adjusted based on the desired RGBA value. More importantly is the matrix which creates the spray pattern shape. The parameters for the shape include several matrices which indicate the farthest and closest points, relative to the gun’s frame. This section of code will need to be adjusted so that the spray pattern models the light intensity’s shape. Once, this is achieved, the simulation will resemble the figure below.
+As mentioned in the script’s comments, the colors can be adjusted based on the desired RGBA value. More importantly is the matrix which creates the spray pattern shape. The parameters for the shape include several matrices which indicate the farthest and closest points, relative to the gun’s frame. This section of code will need to be adjusted so that the spray pattern models the light intensity’s shape. Once, this is achieved the simulation will resemble the figure below.
 <p align = "center">
  <img src = "Images/imag3sec3.jpg" height = "320px" style="margin:10px 10px">
  </p> 
@@ -143,6 +143,11 @@ https://modernrobotics.northwestern.edu/nu-gm-book-resource/2-2-degrees-of-freed
 A2: Magni Mobile Robot Information: 
 https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiquity-robotics/
 
+A3: Shark IQ Robot:
+https://www.sharkclean.com/vacuums/robot-vacuums/
+
+A4: International Ultraviolet association 
+https://www.iuva.org/
 
 ## 7. References
 
