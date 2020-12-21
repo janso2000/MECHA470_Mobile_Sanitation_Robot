@@ -146,7 +146,7 @@ https://www.roboticsbusinessreview.com/robotic-company/directory/listings/ubiqui
 A3: Shark IQ Robot:
 https://www.sharkclean.com/vacuums/robot-vacuums/
 
-A4: International Ultraviolet association 
+A4: International Ultraviolet association:
 https://www.iuva.org/
 
 ## 7. References
