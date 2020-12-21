@@ -159,9 +159,6 @@ Although the tutorial does not resemble the Magni robot, the SprayOn Python code
       far_pB = [ -175, 190, 200] #xyz in mm
       far_color = [0, 0, 1, 0.2] #RGBA (0-1)
       
-<p align = "center">
- <img src = "Images/imag2sec3.jpg" height = "320px" style="margin:10px 10px">
- </p> 
 As mentioned in the script’s comments, the colors can be adjusted based on the desired RGBA value. More importantly is the matrix which creates the spray pattern shape. The parameters for the shape include several matrices which indicate the farthest and closest points, relative to the gun’s frame. This section of code will need to be adjusted so that the spray pattern models the light intensity’s shape. Once, this is achieved, the simulation will resemble the figure below.
 <p align = "center">
  <img src = "Images/imag3sec3.jpg" height = "320px" style="margin:10px 10px">
